@@ -1,0 +1,33 @@
+<button (click)="alternateVisibility()">Menu</button>
+<section class="sidemenu-container"
+    [style.background-color]='theme'
+    [style.width]="widthMenu + '%'"
+    [style.display]="visibleMenu == true?   'flex' : 'none'"
+
+>
+    <div class="item">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="image.png">
+        <p> {{userName}}</p>
+        <!-- Interpolacion activdad -->
+        <button (click)="alternateVisibility()">Back</button>
+         <!-- Ejecutamos event binding -->
+    </div>
+
+    <div class="item">
+        <p><span style="color:blue" >📅</span><span  onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'" >Dasheboard</span></p>
+
+    </div>
+
+    <div class="item">
+      <p><span style="color:blue" >🤵</span><span  onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'" >Profile</span></p>
+    </div>
+
+    <div class="item">
+        <button class="btn" (click)=" setTheme(theme == '#7CC1CF' ? '#7E9EA5' : '#7CC1CF')" >Change color</button>
+
+    <button class="btn" (click)="setSize()">Change size</button>
+
+        <!-- Ejecutamos event binding -->
+    </div>
+
+</section>
